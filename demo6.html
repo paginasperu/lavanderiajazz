@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jazz Lavanderías - Lavado de Ropa por Kilo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #e8f4fc 0%, #ffffff 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #1e5aa8 0%, #2d7dd2 100%);
+            padding: 20px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='10' cy='20' r='3' fill='rgba(255,255,255,0.1)'/%3E%3Ccircle cx='30' cy='50' r='2' fill='rgba(255,255,255,0.15)'/%3E%3Ccircle cx='70' cy='30' r='4' fill='rgba(255,255,255,0.1)'/%3E%3Ccircle cx='90' cy='60' r='2' fill='rgba(255,255,255,0.12)'/%3E%3Ccircle cx='50' cy='80' r='3' fill='rgba(255,255,255,0.1)'/%3E%3C/svg%3E");
+            background-size: 100px 100px;
+            animation: float 20s linear infinite;
+        }
+
+        @keyframes float {
+            0% { background-position: 0 0; }
+            100% { background-position: 100px 100px; }
+        }
+
+        .logo {
+            position: relative;
+            z-index: 1;
+        }
+
+        .logo h1 {
+            color: white;
+            font-size: 3rem;
+            font-weight: 800;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            letter-spacing: 2px;
+        }
+
+        .logo span {
+            color: #ffd700;
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, #1e5aa8 0%, #2d7dd2 50%, #3b8ae0 100%);
+            padding: 60px 0;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .hero-section h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+        }
+
+        .hero-section p {
+            font-size: 1.3rem;
+            opacity: 0.95;
+        }
+
+        /* Delivery Banner */
+        .delivery-banner {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a5a 100%);
+            padding: 25px 0;
+            text-align: center;
+            color: white;
+            margin: -30px auto 40px;
+            max-width: 800px;
+            border-radius: 50px;
+            box-shadow: 0 10px 30px rgba(238, 90, 90, 0.4);
+            position: relative;
+            z-index: 10;
+        }
+
+        .delivery-banner .icon {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .delivery-banner h3 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .delivery-banner p {
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        /* Main Service Section */
+        .main-service {
+            text-align: center;
+            padding: 60px 0;
+            background: white;
+            border-radius: 30px;
+            margin: 40px 0;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+        }
+
+        .main-service h3 {
+            font-size: 2.5rem;
+            color: #1e5aa8;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .main-service .subtitle {
+            font-size: 1.4rem;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .scale-image {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 30px;
+            background: linear-gradient(135deg, #1e5aa8 0%, #2d7dd2 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            box-shadow: 0 15px 40px rgba(30, 90, 168, 0.3);
+        }
+
+        .scale-image::before {
+            content: '⚖️';
+            font-size: 4rem;
+        }
+
+        .scale-image::after {
+            content: 'Jazz';
+            position: absolute;
+            bottom: 30px;
+            color: white;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        /* Why Choose Us */
+        .why-choose-us {
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .why-choose-us h3 {
+            font-size: 2rem;
+            color: #1e5aa8;
+            font-weight: 700;
+            margin-bottom: 40px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 30px 25px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+        }
+
+        .feature-card .icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        .feature-card h4 {
+            color: #1e5aa8;
+            font-size: 1.1rem;
+            font-weight: 600;
+            line-height: 1.5;
+        }
+
+        /* Services Section */
+        .services-section {
+            padding: 60px 0;
+            background: white;
+            border-radius: 30px;
+            margin: 40px 0;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+        }
+
+        .services-section h3 {
+            text-align: center;
+            font-size: 2rem;
+            color: #1e5aa8;
+            font-weight: 700;
+            margin-bottom: 40px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .service-item {
+            text-align: center;
+            padding: 25px 15px;
+            background: linear-gradient(135deg, #f8fbff 0%, #e8f4fc 100%);
+            border-radius: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .service-item:hover {
+            transform: scale(1.05);
+        }
+
+        .service-item .icon {
+            font-size: 2.5rem;
+            margin-bottom: 12px;
+        }
+
+        .service-item h4 {
+            color: #333;
+            font-size: 0.95rem;
+            font-weight: 600;
+            line-height: 1.4;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            text-align: center;
+            padding: 60px 0;
+            background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+            border-radius: 30px;
+            margin: 40px 0;
+            color: white;
+            box-shadow: 0 20px 60px rgba(37, 211, 102, 0.3);
+        }
+
+        .cta-section h3 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 25px;
+            opacity: 0.95;
+        }
+
+        .phone-numbers {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .phone-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: white;
+            color: #25d366;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.2rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+
+        .phone-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        }
+
+        .phone-btn .whatsapp-icon {
+            font-size: 1.5rem;
+        }
+
+        /* Social Media */
+        .social-section {
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        .social-section h3 {
+            font-size: 1.5rem;
+            color: #1e5aa8;
+            font-weight: 600;
+            margin-bottom: 25px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            color: white;
+            transition: transform 0.3s ease;
+        }
+
+        .social-link:hover {
+            transform: translateY(-3px);
+        }
+
+        .social-link.facebook {
+            background: linear-gradient(135deg, #1877f2 0%, #0d65d9 100%);
+        }
+
+        .social-link.instagram {
+            background: linear-gradient(135deg, #e4405f 0%, #c13584 50%, #833ab4 100%);
+        }
+
+        .social-link.tiktok {
+            background: linear-gradient(135deg, #000000 0%, #25f4ee 50%, #fe2c55 100%);
+        }
+
+        .social-link .icon {
+            font-size: 1.5rem;
+        }
+
+        .social-link span {
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 30px 0;
+            background: #1e5aa8;
+            color: white;
+            margin-top: 40px;
+        }
+
+        .footer p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .logo h1 {
+                font-size: 2rem;
+            }
+
+            .hero-section h2 {
+                font-size: 1.5rem;
+            }
+
+            .hero-section p {
+                font-size: 1rem;
+            }
+
+            .delivery-banner {
+                border-radius: 25px;
+                padding: 20px;
+            }
+
+            .delivery-banner h3 {
+                font-size: 1.4rem;
+            }
+
+            .main-service h3 {
+                font-size: 1.8rem;
+            }
+
+            .main-service .subtitle {
+                font-size: 1.1rem;
+            }
+
+            .why-choose-us h3,
+            .services-section h3 {
+                font-size: 1.5rem;
+            }
+
+            .cta-section h3 {
+                font-size: 1.6rem;
+            }
+
+            .cta-section p {
+                font-size: 1rem;
+            }
+
+            .phone-btn {
+                font-size: 1rem;
+                padding: 12px 20px;
+            }
+
+            .services-grid {
+                grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+                gap: 15px;
+            }
+
+            .service-item {
+                padding: 20px 10px;
+            }
+
+            .service-item .icon {
+                font-size: 2rem;
+            }
+
+            .service-item h4 {
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>Jazz <span>Lavanderías</span></h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="hero-section">
+        <div class="container">
+            <h2>RECOGEMOS, LAVAMOS Y ENTREGAMOS TU ROPA SIN QUE SALGAS DE CASA</h2>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="delivery-banner">
+            <div class="icon">🚗⏰</div>
+            <h3>DELIVERY GRATIS</h3>
+            <p>RECOJO Y ENTREGA SIN COSTO</p>
+        </div>
+
+        <div class="main-service">
+            <h3>LAVADO DE ROPA POR KILO</h3>
+            <p class="subtitle">ROPA DE USO DIARIO</p>
+            <div class="scale-image"></div>
+        </div>
+
+        <div class="why-choose-us">
+            <h3>¿POR QUÉ ELEGIRNOS?</h3>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="icon">👕</div>
+                    <h4>TU ROPA SE LAVA POR SEPARADO</h4>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">✨</div>
+                    <h4>MAYOR HIGIENE Y CUIDADO</h4>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🎨</div>
+                    <h4>CONSERVA MEJOR LOS COLORES Y TELAS</h4>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">💝</div>
+                    <h4>ATENCIÓN PERSONALIZADA</h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="services-section">
+            <h3>NUESTROS SERVICIOS</h3>
+            <div class="services-grid">
+                <div class="service-item">
+                    <div class="icon">👔</div>
+                    <h4>CAMISAS Y POLOS</h4>
+                </div>
+                <div class="service-item">
+                    <div class="icon">👖</div>
+                    <h4>PANTALONES Y VESTIDOS</h4>
+                </div>
+                <div class="service-item">
+                    <div class="icon">🧥</div>
+                    <h4>CASACAS Y CHOMPAS</h4>
+                </div>
+                <div class="service-item">
+                    <div class="icon">👟</div>
+                    <h4>ZAPATILLAS</h4>
+                </div>
+                <div class="service-item">
+                    <div class="icon">🧢</div>
+                    <h4>GORRAS</h4>
+                </div>
+                <div class="service-item">
+                    <div class="icon">🪟</div>
+                    <h4>CORTINAS</h4>
+                </div>
+                <div class="service-item">
+                    <div class="icon">🧸</div>
+                    <h4>PELUCHES</h4>
+                </div>
+                <div class="service-item">
+                    <div class="icon">🛏️</div>
+                    <h4>FRAZADAS</h4>
+                </div>
+                <div class="service-item">
+                    <div class="icon">🛌</div>
+                    <h4>EDREDONES</h4>
+                </div>
+                <div class="service-item">
+                    <div class="icon">🛏️</div>
+                    <h4>SÁBANAS</h4>
+                </div>
+                <div class="service-item">
+                    <div class="icon">🔥</div>
+                    <h4>SERVICIO DE PLANCHADO</h4>
+                </div>
+                <div class="service-item">
+                    <div class="icon">💨</div>
+                    <h4>SERVICIO DE SECADO</h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <h3>¡ESCRÍBENOS AHORA!</h3>
+            <p>AGENDA TU SERVICIO POR WHATSAPP</p>
+            <div class="phone-numbers">
+                <a href="https://wa.me/51902691277" class="phone-btn" target="_blank">
+                    <span class="whatsapp-icon">📱</span>
+                    902 691 277
+                </a>
+                <a href="https://wa.me/51912421933" class="phone-btn" target="_blank">
+                    <span class="whatsapp-icon">📱</span>
+                    912 421 933
+                </a>
+            </div>
+        </div>
+
+        <div class="social-section">
+            <h3>SÍGUENOS EN NUESTRAS REDES SOCIALES</h3>
+            <div class="social-links">
+                <a href="#" class="social-link facebook">
+                    <span class="icon">📘</span>
+                    <span>lavanderiasjazz</span>
+                </a>
+                <a href="#" class="social-link instagram">
+                    <span class="icon">📷</span>
+                    <span>lavanderiasjazz</span>
+                </a>
+                <a href="#" class="social-link tiktok">
+                    <span class="icon">🎵</span>
+                    <span>lavanderiasjazz</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <p>© 2024 Jazz Lavanderías. Todos los derechos reservados.</p>
+        </div>
+    </div>
+</body>
+</html>
