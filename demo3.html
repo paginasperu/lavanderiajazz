@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jazz Lavanderías | Lavado de Ropa por Kilo + Delivery Gratis</title>
+  <meta name="description" content="Jazz Lavanderías: recogemos, lavamos y entregamos tu ropa sin que salgas de casa. Lavado por kilo, planchado, secado y delivery gratis. ¡Agenda por WhatsApp!">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+    
+    .gradient-blue {
+      background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 50%, #2563eb 100%);
+    }
+    
+    .gradient-hero {
+      background: linear-gradient(160deg, #eff6ff 0%, #dbeafe 40%, #ffffff 100%);
+    }
+    
+    .service-card {
+      transition: all 0.3s ease;
+    }
+    
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    }
+    
+    .pulse-whatsapp {
+      animation: pulse-wa 2s infinite;
+    }
+    
+    @keyframes pulse-wa {
+      0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
+      70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+    }
+    
+    .float-bubble {
+      animation: float 6s ease-in-out infinite;
+    }
+    
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-12px); }
+    }
+  </style>
+</head>
+<body class="bg-white text-slate-800">
+
+  <!-- NAVBAR -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-blue-100 shadow-sm">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <div class="w-10 h-10 rounded-full bg-blue-700 flex items-center justify-center text-white font-bold text-xl">J</div>
+        <div>
+          <span class="text-2xl font-extrabold text-blue-800 tracking-tight">Jazz</span>
+          <span class="block text-[10px] uppercase tracking-widest text-blue-600 -mt-1">Lavanderías</span>
+        </div>
+      </div>
+      <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+        <a href="#servicios" class="hover:text-blue-700 transition">Servicios</a>
+        <a href="#por-que" class="hover:text-blue-700 transition">¿Por qué elegirnos?</a>
+        <a href="#contacto" class="hover:text-blue-700 transition">Contacto</a>
+      </div>
+      <a href="https://wa.me/51902691277" target="_blank" 
+         class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center gap-2 transition shadow-md">
+        <i class="fab fa-whatsapp text-lg"></i>
+        <span class="hidden sm:inline">WhatsApp</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="gradient-hero pt-28 pb-16 md:pt-36 md:pb-24 overflow-hidden relative">
+    <!-- Decorative bubbles -->
+    <div class="absolute top-20 right-10 w-24 h-24 bg-blue-200/40 rounded-full blur-xl float-bubble"></div>
+    <div class="absolute bottom-10 left-10 w-32 h-32 bg-blue-100/50 rounded-full blur-2xl float-bubble" style="animation-delay: 1s;"></div>
+    
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 grid md:grid-cols-2 gap-10 items-center">
+      <div class="space-y-6">
+        <div class="inline-flex items-center gap-2 bg-blue-100 text-blue-800 px-4 py-1.5 rounded-full text-sm font-semibold">
+          <i class="fas fa-truck-fast"></i>
+          Delivery Gratis · Recojo y Entrega
+        </div>
+        
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-blue-900 leading-tight">
+          Lavado de ropa<br>
+          <span class="text-blue-600">por kilo</span>
+        </h1>
+        
+        <p class="text-lg text-slate-600 max-w-lg">
+          <strong class="text-blue-800">Recogemos, lavamos y entregamos</strong> tu ropa 
+          <span class="font-semibold text-blue-700">sin que salgas de casa</span>.
+        </p>
+        
+        <div class="flex flex-wrap gap-4 pt-2">
+          <a href="https://wa.me/51902691277?text=Hola%20Jazz%20Lavanderías,%20quiero%20agendar%20un%20servicio" 
+             target="_blank"
+             class="pulse-whatsapp bg-green-500 hover:bg-green-600 text-white px-7 py-3.5 rounded-xl font-bold text-lg flex items-center gap-3 shadow-lg transition">
+            <i class="fab fa-whatsapp text-2xl"></i>
+            Agenda por WhatsApp
+          </a>
+          <a href="#servicios" 
+             class="bg-white border-2 border-blue-600 text-blue-700 hover:bg-blue-50 px-6 py-3.5 rounded-xl font-semibold transition">
+            Ver servicios
+          </a>
+        </div>
+        
+        <div class="flex items-center gap-6 pt-4 text-sm text-slate-500">
+          <div class="flex items-center gap-2">
+            <i class="fas fa-check-circle text-green-500"></i>
+            Ropa de uso diario
+          </div>
+          <div class="flex items-center gap-2">
+            <i class="fas fa-check-circle text-green-500"></i>
+            Sin costo de envío
+          </div>
+        </div>
+      </div>
+      
+      <!-- Visual card -->
+      <div class="relative flex justify-center">
+        <div class="bg-white rounded-3xl shadow-2xl p-6 border border-blue-100 max-w-sm w-full">
+          <div class="bg-blue-700 text-white rounded-2xl p-5 text-center mb-5">
+            <i class="fas fa-scale-balanced text-4xl mb-2"></i>
+            <h3 class="text-2xl font-bold">LAVADO POR KILO</h3>
+            <p class="text-blue-100 text-sm mt-1">Ropa de uso diario</p>
+          </div>
+          <div class="space-y-3 text-sm">
+            <div class="flex items-center gap-3 bg-blue-50 rounded-xl p-3">
+              <i class="fas fa-tshirt text-blue-600 text-xl"></i>
+              <span class="font-medium">Camisas, polos, pantalones...</span>
+            </div>
+            <div class="flex items-center gap-3 bg-blue-50 rounded-xl p-3">
+              <i class="fas fa-shoe-prints text-blue-600 text-xl"></i>
+              <span class="font-medium">Zapatillas, gorras, cortinas</span>
+            </div>
+            <div class="flex items-center gap-3 bg-blue-50 rounded-xl p-3">
+              <i class="fas fa-bed text-blue-600 text-xl"></i>
+              <span class="font-medium">Sábanas, frazadas, edredones</span>
+            </div>
+          </div>
+          <div class="mt-5 bg-red-500 text-white text-center py-3 rounded-xl font-bold tracking-wide">
+            🚚 DELIVERY GRATIS
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICIOS -->
+  <section id="servicios" class="py-16 md:py-24 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-14">
+        <h2 class="text-3xl md:text-4xl font-extrabold text-blue-900 mb-3">Nuestros Servicios</h2>
+        <p class="text-slate-500 max-w-xl mx-auto">Lavamos todo tipo de prendas y textiles con el máximo cuidado y profesionalismo.</p>
+      </div>
+      
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+        <!-- Service items -->
+        <div class="service-card bg-blue-50 rounded-2xl p-5 text-center border border-blue-100">
+          <div class="w-14 h-14 mx-auto bg-white rounded-xl flex items-center justify-center shadow-sm mb-3">
+            <i class="fas fa-shirt text-2xl text-blue-600"></i>
+          </div>
+          <h3 class="font-semibold text-blue-900 text-sm">Camisas y Polos</h3>
+        </div>
+        
+        <div class="service-card bg-blue-50 rounded-2xl p-5 text-center border border-blue-100">
+          <div class="w-14 h-14 mx-auto bg-white rounded-xl flex items-center justify-center shadow-sm mb-3">
+            <i class="fas fa-socks text-2xl text-blue-600"></i>
+          </div>
+          <h3 class="font-semibold text-blue-900 text-sm">Pantalones y Vestidos</h3>
+        </div>
+        
+        <div class="service-card bg-blue-50 rounded-2xl p-5 text-center border border-blue-100">
+          <div class="w-14 h-14 mx-auto bg-white rounded-xl flex items-center justify-center shadow-sm mb-3">
+            <i class="fas fa-vest text-2xl text-blue-600"></i>
+          </div>
+          <h3 class="font-semibold text-blue-900 text-sm">Casacas y Chompas</h3>
+        </div>
+        
+        <div class="service-card bg-blue-50 rounded-2xl p-5 text-center border border-blue-100">
+          <div class="w-14 h-14 mx-auto bg-white rounded-xl flex items-center justify-center shadow-sm mb-3">
+            <i class="fas fa-shoe-prints text-2xl text-blue-600"></i>
+          </div>
+          <h3 class="font-semibold text-blue-900 text-sm">Zapatillas</h3>
+        </div>
+        
+        <div class="service-card bg-blue-50 rounded-2xl p-5 text-center border border-blue-100">
+          <div class="w-14 h-14 mx-auto bg-white rounded-xl flex items-center justify-center shadow-sm mb-3">
+            <i class="fas fa-hat-cowboy text-2xl text-blue-600"></i>
+          </div>
+          <h3 class="font-semibold text-blue-900 text-sm">Gorras</h3>
+        </div>
+        
+        <div class="service-card bg-blue-50 rounded-2xl p-5 text-center border border-blue-100">
+          <div class="w-14 h-14 mx-auto bg-white rounded-xl flex items-center justify-center shadow-sm mb-3">
+            <i class="fas fa-border-all text-2xl text-blue-600"></i>
+          </div>
+          <h3 class="font-semibold text-blue-900 text-sm">Cortinas</h3>
+        </div>
+        
+        <div class="service-card bg-blue-50 rounded-2xl p-5 text-center border border-blue-100">
+          <div class="w-14 h-14 mx-auto bg-white rounded-xl flex items-center justify-center shadow-sm mb-3">
+            <i class="fas fa-bear text-2xl text-blue-600"></i>
+          </div>
+          <h3 class="font-semibold text-blue-900 text-sm">Peluches</h3>
+        </div>
+        
+        <div class="service-card bg-blue-50 rounded-2xl p-5 text-center border border-blue-100">
+          <div class="w-14 h-14 mx-auto bg-white rounded-xl flex items-center justify-center shadow-sm mb-3">
+            <i class="fas fa-blanket text-2xl text-blue-600"></i>
+          </div>
+          <h3 class="font-semibold text-blue-900 text-sm">Frazadas</h3>
+        </div>
+        
+        <div class="service-card bg-blue-50 rounded-2xl p-5 text-center border border-blue-100">
+          <div class="w-14 h-14 mx-auto bg-white rounded-xl flex items-center justify-center shadow-sm mb-3">
+            <i class="fas fa-bed text-2xl text-blue-600"></i>
+          </div>
+          <h3 class="font-semibold text-blue-900 text-sm">Edredones</h3>
+        </div>
+        
+        <div class="service-card bg-blue-50 rounded-2xl p-5 text-center border border-blue-100">
+          <div class="w-14 h-14 mx-auto bg-white rounded-xl flex items-center justify-center shadow-sm mb-3">
+            <i class="fas fa-layer-group text-2xl text-blue-600"></i>
+          </div>
+          <h3 class="font-semibold text-blue-900 text-sm">Sábanas</h3>
+        </div>
+        
+        <div class="service-card bg-blue-50 rounded-2xl p-5 text-center border border-blue-100">
+          <div class="w-14 h-14 mx-auto bg-white rounded-xl flex items-center justify-center shadow-sm mb-3">
+            <i class="fas fa-iron text-2xl text-blue-600"></i>
+          </div>
+          <h3 class="font-semibold text-blue-900 text-sm">Servicio de Planchado</h3>
+        </div>
+        
+        <div class="service-card bg-blue-50 rounded-2xl p-5 text-center border border-blue-100">
+          <div class="w-14 h-14 mx-auto bg-white rounded-xl flex items-center justify-center shadow-sm mb-3">
+            <i class="fas fa-dryer text-2xl text-blue-600"></i>
+          </div>
+          <h3 class="font-semibold text-blue-900 text-sm">Servicio de Secado</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DELIVERY BANNER -->
+  <section class="py-10 bg-red-500">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 text-white text-center md:text-left">
+      <div class="text-5xl">🚚</div>
+      <div>
+        <h3 class="text-2xl md:text-3xl font-extrabold tracking-wide">DELIVERY GRATIS</h3>
+        <p class="text-red-100 font-medium">Recojo y entrega sin costo · ¡Sin que salgas de casa!</p>
+      </div>
+      <a href="https://wa.me/51902691277" target="_blank"
+         class="bg-white text-red-600 hover:bg-red-50 px-6 py-3 rounded-xl font-bold transition shadow-lg">
+        Solicitar ahora
+      </a>
+    </div>
+  </section>
+
+  <!-- ¿POR QUÉ ELEGIRNOS? -->
+  <section id="por-que" class="py-16 md:py-24 bg-slate-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-14">
+        <h2 class="text-3xl md:text-4xl font-extrabold text-blue-900 mb-3">¿Por qué elegirnos?</h2>
+        <p class="text-slate-500">Calidad, higiene y atención personalizada en cada prenda.</p>
+      </div>
+      
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100 text-center hover:shadow-md transition">
+          <div class="w-16 h-16 mx-auto bg-blue-100 rounded-full flex items-center justify-center mb-4">
+            <i class="fas fa-washer text-2xl text-blue-700"></i>
+          </div>
+          <h3 class="font-bold text-blue-900 mb-2">Tu ropa se lava por separado</h3>
+          <p class="text-sm text-slate-500">Cada cliente tiene su propio ciclo de lavado para máxima higiene.</p>
+        </div>
+        
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100 text-center hover:shadow-md transition">
+          <div class="w-16 h-16 mx-auto bg-blue-100 rounded-full flex items-center justify-center mb-4">
+            <i class="fas fa-shield-heart text-2xl text-blue-700"></i>
+          </div>
+          <h3 class="font-bold text-blue-900 mb-2">Mayor higiene y cuidado</h3>
+          <p class="text-sm text-slate-500">Productos de calidad y procesos pensados para proteger tus prendas.</p>
+        </div>
+        
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100 text-center hover:shadow-md transition">
+          <div class="w-16 h-16 mx-auto bg-blue-100 rounded-full flex items-center justify-center mb-4">
+            <i class="fas fa-palette text-2xl text-blue-700"></i>
+          </div>
+          <h3 class="font-bold text-blue-900 mb-2">Conserva mejor los colores y telas</h3>
+          <p class="text-sm text-slate-500">Tratamientos suaves que mantienen el aspecto original de tu ropa.</p>
+        </div>
+        
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100 text-center hover:shadow-md transition">
+          <div class="w-16 h-16 mx-auto bg-blue-100 rounded-full flex items-center justify-center mb-4">
+            <i class="fas fa-headset text-2xl text-blue-700"></i>
+          </div>
+          <h3 class="font-bold text-blue-900 mb-2">Atención personalizada</h3>
+          <p class="text-sm text-slate-500">Te acompañamos en todo el proceso por WhatsApp de forma cercana.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL / CONTACTO -->
+  <section id="contacto" class="py-16 md:py-20 gradient-blue text-white relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute top-10 left-10 w-40 h-40 bg-white rounded-full blur-3xl"></div>
+      <div class="absolute bottom-10 right-10 w-56 h-56 bg-white rounded-full blur-3xl"></div>
+    </div>
+    
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center relative z-10">
+      <h2 class="text-3xl md:text-4xl font-extrabold mb-4">¡Escríbenos ahora!</h2>
+      <p class="text-blue-100 text-lg mb-8">Agenda tu servicio por WhatsApp y olvídate de lavar</p>
+      
+      <div class="flex flex-col sm:flex-row justify-center gap-4 mb-10">
+        <a href="https://wa.me/51902691277" target="_blank"
+           class="bg-green-500 hover:bg-green-400 text-white px-8 py-4 rounded-2xl font-bold text-lg flex items-center justify-center gap-3 shadow-xl transition">
+          <i class="fab fa-whatsapp text-2xl"></i>
+          902 691 277
+        </a>
+        <a href="https://wa.me/51912421933" target="_blank"
+           class="bg-green-500 hover:bg-green-400 text-white px-8 py-4 rounded-2xl font-bold text-lg flex items-center justify-center gap-3 shadow-xl transition">
+          <i class="fab fa-whatsapp text-2xl"></i>
+          912 421 933
+        </a>
+      </div>
+      
+      <p class="text-blue-200 text-sm mb-6">Síguenos en nuestras redes sociales</p>
+      <div class="flex justify-center gap-5">
+        <a href="https://www.facebook.com/lavanderiasjazz" target="_blank" class="w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition">
+          <i class="fab fa-facebook-f text-xl"></i>
+        </a>
+        <a href="https://www.instagram.com/lavanderiasjazz" target="_blank" class="w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition">
+          <i class="fab fa-instagram text-xl"></i>
+        </a>
+        <a href="https://www.tiktok.com/@lavanderiasjazz" target="_blank" class="w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition">
+          <i class="fab fa-tiktok text-xl"></i>
+        </a>
+      </div>
+      <p class="mt-4 text-blue-300 text-sm">@lavanderiasjazz</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-blue-950 text-blue-200 py-8">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
+      <div class="flex items-center gap-2">
+        <span class="text-xl font-bold text-white">Jazz</span>
+        <span class="text-blue-400">Lavanderías</span>
+      </div>
+      <p>© 2026 Jazz Lavanderías · Todos los derechos reservados</p>
+      <div class="flex gap-4">
+        <a href="https://wa.me/51902691277" class="hover:text-white transition">WhatsApp</a>
+        <a href="#servicios" class="hover:text-white transition">Servicios</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/51902691277?text=Hola%20Jazz%20Lavanderías,%20quiero%20información" 
+     target="_blank"
+     class="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl pulse-whatsapp transition">
+    <i class="fab fa-whatsapp text-3xl"></i>
+  </a>
+
+</body>
+</html>
